@@ -1,1 +1,396 @@
-<!DOCTYPE html><html lang="ru"><head>    <meta charset="utf-8">    <title></title>    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">    <meta name="robots" content="noindex, nofollow">    <meta name="googlebot" content="noindex, nofollow">    <meta name="robots" content="noindex, nofollow"/> или <meta name="robots" content="none"/>    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />    <!-- CSS only -->    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->    <link rel="stylesheet" href="css/bootstrap.css">    <link rel="stylesheet" href="css/abaut.css">    <link rel="stylesheet" href="css/animate.css">    <script async src="js/jquery.min.js"></script></head><body>    <header class="header" id="header">    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">        <div class="container">            <a class="navbar-brand" href="#">                <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>            </a>            <button class="navbar-toggler second-button" type="button" data-bs-toggle="collapse"                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"                aria-label="Toggle navigation">                <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>            </button>            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">                <div class="navbar-nav header-menu">                    <a class="nav-link text-center" aria-current="page" href="/index.html">Главная</a>                    <a class="nav-link text-center" href="/documents.html">Документы</a>                    <a class="nav-link text-center flowing-scroll" href="#footer">Контакты</a>                    <a class="nav-link text-center" href="/abaut.html">О нас</a>                </div>            </div>        </div>    </nav></header>    <section class="about-us">        <div class="container">            <h4 class="big-title wow fadeInLeft  mt-5">Про нас</h4>            <div class="row justify-content-between">                <div class="about-us__img col-lg-6 col-12 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s"">                    <picture><source srcset="img/team.webp" type="image/webp"><img src="img/team.png" alt=""></picture>                </div>                <div class="about-us__text align-self-center col-lg-5 wow fadeInRight" data-wow-duration="2s"                    data-wow-delay="0s"">                    <p>Да, о нас уверенно можно сказать что:                         Наш персонал обладает огромным опытом и  высокой квалификацией                         Умеем выбрать оптимальные, по соотношению цена/качество,  материалы для выполнения успешного ремонта                        Имеем техническое обеспечение, позволяющее сделать диагностику, ремонт или обслуживание максимально быстро и качественно и свести вероятность ошибки к минимуму.                        Главное - это желание помочь нашему клиенту, используя наши навыки.                          Да, мы работаем с техникой, но в первую очередь для людей! Наша цель - помочь быть вам продуктивнее, чтобы ваша работа была максимально выгодной и быстрой. Мы хотим сэкономить ваше время, чтобы его оставалось болше для себя семьи креатива и созидания.                         Если вы устали от непонятных сроков, аргументов и цен, то оцените наш подход к делу. Мы работаем для ВАС и порядочность - это наш добродетель!                         РЕПУТАЦИЯ….                                           </p>                </div>            </div>        </div>    </section>    <footer class="footer" id="footer">  <div class="row">    <div class="footer-left col-lg-6">      <form method="POST" id="footer-form" name="footerForm" class="row g-3">        <div class="status text-danger"></div>        <div class="col-md-4 pb-3">          <label for="validationDefault01" class="form-label">Ваше имя</label>          <input name='name' type="text" class="form-control" id="validationDefault01" placeholder="Имя" required>        </div>        <div class="col-md-4 pb-3">          <label for="validationDefaultUsername" class="form-label">Електронная почта</label>          <div class="input-group">            <!-- <span class="input-group-text" id="inputGroupPrepend2">@</span> -->            <input name='email' type="text" class="form-control" id="validationDefaultUsername" placeholder="Еmail"              aria-describedby="inputGroupPrepend2" required>          </div>        </div>        <div class="col-md-4 pb-3">          <label for="validationDefault05" class="form-label">Номер телефона</label>          <input name='phone' type="text" id='phone2' class="form-control" id="validationDefault05" placeholder="Тел"            required>        </div>        <div class="col-12 pb-3">          <div class="form-check">            <input class="form-check-input invalidCheck" name="checkData" type="checkbox" value="" id="invalidCheck2"              required>            <label class="form-check-label" for="invalidCheck2">              Я согласен на оброботку персональных данных            </label>          </div>        </div>        <div class="col-md-12 pb-3">          <div class="form-group">            <button type="button" onclick='validateForm(footerForm)' class="btn btn-warning"              id="sendMail2">Отправить</button>          </div>        </div>      </form>      <div class="footer-contacts">        <div class="footer-contacts__item">          <div class="footer-contacts__icon">            <picture><source srcset="/img/icons/phone.webp" type="image/webp"><img src="/img/icons/phone.png" alt=""></picture>          </div>          <div class="footer-contacts__link">            <a href="#">Тел: 063 177 55 88 </a>            <a href="#">Тел: 096 527 67 22 </a>            <a href="#">Тел: 048 736 53 46 </a>          </div>        </div>        <div class="footer-contacts__item">          <div class="footer-contacts__icon">            <picture><source srcset="/img/icons/gmail.webp" type="image/webp"><img src="/img/icons/gmail.png" alt=""></picture>          </div>          <div class="footer-contacts__link">            <a href="#">Email: repko@gmail.com</a>          </div>        </div>        <div class="footer-contacts__item">          <div class="footer-contacts__icon">            <picture><source srcset="/img/icons/telegram.webp" type="image/webp"><img src="/img/icons/telegram.png" alt=""></picture>          </div>          <div class="footer-contacts__link">            <a href="#">Teleg: repko</a>          </div>        </div>      </div>    </div>    <div id="map" class="col-lg-6">      <iframe        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9350048090846!2d30.722626915791917!3d46.46979537380097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63187bb197823%3A0xe3cd77c0e9e5d258!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCAxOCwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1634898967823!5m2!1sru!2sua"        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    </div>  </div>  <div class="create">    <p>© 2021 Репко</p>    <a href="https://truedream.site/">Cайт создан компанией TrueDream</a>  </div></footer><!-- Async script executes immediately and must be after any DOM elements used in callback. --><!-- <script>  $(document).ready(function () {    google.maps.event.addDomListener(window, 'load', initMap);  });</script><script async defer>  function initMap() {    var pos = { lat: 49.831, lng: 23.997 }    const map = new google.maps.Map(document.getElementById("map"),      {        center: { lat: 49.831, lng: 23.997 },        zoom: 17,        styles: [          {            "elementType": "geometry",            "stylers": [              {                "color": "#f5f5f5"              }            ]          },          {            "elementType": "labels.icon",            "stylers": [              {                "visibility": "off"              }            ]          },          {            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#616161"              }            ]          },          {            "elementType": "labels.text.stroke",            "stylers": [              {                "color": "#f5f5f5"              }            ]          },          {            "featureType": "administrative.land_parcel",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#bdbdbd"              }            ]          },          {            "featureType": "poi",            "elementType": "geometry",            "stylers": [              {                "color": "#eeeeee"              }            ]          },          {            "featureType": "poi",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#757575"              }            ]          },          {            "featureType": "poi.park",            "elementType": "geometry",            "stylers": [              {                "color": "#e5e5e5"              }            ]          },          {            "featureType": "poi.park",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#9e9e9e"              }            ]          },          {            "featureType": "road",            "elementType": "geometry",            "stylers": [              {                "color": "#ffffff"              }            ]          },          {            "featureType": "road.arterial",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#757575"              }            ]          },          {            "featureType": "road.highway",            "elementType": "geometry",            "stylers": [              {                "color": "#dadada"              }            ]          },          {            "featureType": "road.highway",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#616161"              }            ]          },          {            "featureType": "road.local",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#9e9e9e"              }            ]          },          {            "featureType": "transit.line",            "elementType": "geometry",            "stylers": [              {                "color": "#e5e5e5"              }            ]          },          {            "featureType": "transit.station",            "elementType": "geometry",            "stylers": [              {                "color": "#eeeeee"              }            ]          },          {            "featureType": "water",            "elementType": "geometry",            "stylers": [              {                "color": "#c9c9c9"              }            ]          },          {            "featureType": "water",            "elementType": "labels.text.fill",            "stylers": [              {                "color": "#9e9e9e"              }            ]          }        ]      }    );    new google.maps.Marker({      position: map.getCenter(),      // icon: {      //     src: 'img/icon/marker-icon-19-ffe500-40.png',      // },      // icon: 'img/icon/marker-icon-19-ffe500-40.png',      draggable: true,      map: map,      // animation: google.maps.Animation.BOUNCE    });  }</script><script async    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosqyWAVbCJ_OVBDSu14ZqrHH05pYcNs8&callback=initMap"></script> -->    <script async src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"                    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"                    crossorigin="anonymous">                    </script>                    <script src="js/wow.min.js"></script>                    <script>                        new WOW().init();                    </script>                    <script src="js/script.js"></script>                    <script type="text/javascript">                        (function() {                            var script = document.createElement('script');                            script.type = 'text/javascript'; script.async = true;                            script.src = 'https://app.remonline.ua/static/dist/js/order-status-widget.js';                            script.setAttribute('data-widget-key', '9b652324bb76090ed68abd259d5acdff');                            document.getElementsByTagName('head')[0].appendChild(script);                        })();                    </script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow"/> или <meta name="robots" content="none"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/abaut.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script async src="js/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <header class="header" id="header">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+            </a>
+            <button class="navbar-toggler second-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav header-menu">
+                    <a class="nav-link text-center" aria-current="page" href="/index.html">Главная</a>
+                    <a class="nav-link text-center" href="/documents.html">Документы</a>
+                    <a class="nav-link text-center flowing-scroll" href="#footer">Контакты</a>
+                    <a class="nav-link text-center" href="/abaut.html">О нас</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+    <section class="about-us">
+        <div class="container">
+            <h4 class="big-title wow fadeInLeft  mt-5">Про нас</h4>
+            <div class="row justify-content-between">
+                <div class="about-us__img col-lg-6 col-12 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s"">
+                    <picture><source srcset="img/team.webp" type="image/webp"><img src="img/team.png" alt=""></picture>
+                </div>
+                <div class="about-us__text align-self-center col-lg-5 wow fadeInRight" data-wow-duration="2s"
+                    data-wow-delay="0s"">
+                    <p>Да, о нас уверенно можно сказать что: 
+                        Наш персонал обладает огромным опытом и  высокой квалификацией 
+                        Умеем выбрать оптимальные, по соотношению цена/качество,  материалы для выполнения успешного ремонта
+                        Имеем техническое обеспечение, позволяющее сделать диагностику, ремонт или обслуживание максимально быстро и качественно и свести вероятность ошибки к минимуму.
+                        Главное - это желание помочь нашему клиенту, используя наши навыки.  
+                        Да, мы работаем с техникой, но в первую очередь для людей! Наша цель - помочь быть вам продуктивнее, чтобы ваша работа была максимально выгодной и быстрой. Мы хотим сэкономить ваше время, чтобы его оставалось болше для себя семьи креатива и созидания. 
+                        Если вы устали от непонятных сроков, аргументов и цен, то оцените наш подход к делу. Мы работаем для ВАС и порядочность - это наш добродетель! 
+                        РЕПУТАЦИЯ….
+                        
+                   </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+  <div class="row">
+    <div class="footer-left col-lg-6">
+      <form method="POST" id="footer-form" name="footerForm" class="row g-3">
+        <div class="status text-danger"></div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefault01" class="form-label">Ваше имя</label>
+          <input name='name' type="text" class="form-control" id="validationDefault01" placeholder="Имя" required>
+        </div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefaultUsername" class="form-label">Електронная почта</label>
+          <div class="input-group">
+            <!-- <span class="input-group-text" id="inputGroupPrepend2">@</span> -->
+            <input name='email' type="text" class="form-control" id="validationDefaultUsername" placeholder="Еmail"
+              aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefault05" class="form-label">Номер телефона</label>
+          <input name='phone' type="text" id='phone2' class="form-control" id="validationDefault05" placeholder="Тел"
+            required>
+        </div>
+        <div class="col-12 pb-3">
+          <div class="form-check">
+            <input class="form-check-input invalidCheck" name="checkData" type="checkbox" value="" id="invalidCheck2"
+              required>
+            <label class="form-check-label" for="invalidCheck2">
+              Я согласен на оброботку персональных данных
+            </label>
+          </div>
+        </div>
+        <div class="col-md-12 pb-3">
+          <div class="form-group">
+            <button type="button" onclick='validateForm(footerForm)' class="btn btn-warning"
+              id="sendMail2">Отправить</button>
+
+          </div>
+        </div>
+      </form>
+      <div class="footer-contacts">
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="img/icons/phone.webp" type="image/webp"><img src="img/icons/phone.png" alt=""></picture>
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Тел: 063 177 55 88 </a>
+            <a href="#">Тел: 096 527 67 22 </a>
+            <a href="#">Тел: 048 736 53 46 </a>
+          </div>
+        </div>
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="img/icons/gmail.webp" type="image/webp"><img src="img/icons/gmail.png" alt=""></picture>
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Email: repko@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="img/icons/telegram.webp" type="image/webp"><img src="img/icons/telegram.png" alt=""></picture>
+
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Teleg: repko</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div id="map" class="col-lg-6">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9350048090846!2d30.722626915791917!3d46.46979537380097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63187bb197823%3A0xe3cd77c0e9e5d258!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCAxOCwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1634898967823!5m2!1sru!2sua"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+
+  <div class="create">
+
+    <p>© 2021 Репко</p>
+    <a href="https://truedream.site/">Cайт создан компанией TrueDream</a>
+  </div>
+
+</footer>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+
+<!-- <script>
+  $(document).ready(function () {
+
+    google.maps.event.addDomListener(window, 'load', initMap);
+  });
+</script>
+
+<script async defer>
+  function initMap() {
+    var pos = { lat: 49.831, lng: 23.997 }
+
+    const map = new google.maps.Map(document.getElementById("map"),
+      {
+        center: { lat: 49.831, lng: 23.997 },
+        zoom: 17,
+
+        styles: [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#dadada"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#c9c9c9"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }
+        ]
+
+
+
+      }
+
+
+    );
+    new google.maps.Marker({
+      position: map.getCenter(),
+      // icon: {
+      //     src: 'img/icon/marker-icon-19-ffe500-40.png',
+
+      // },
+      // icon: 'img/icon/marker-icon-19-ffe500-40.png',
+
+
+
+      draggable: true,
+      map: map,
+      // animation: google.maps.Animation.BOUNCE
+
+    });
+
+  }
+
+
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosqyWAVbCJ_OVBDSu14ZqrHH05pYcNs8&callback=initMap">
+</script> -->
+
+
+
+    <script async src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+                    crossorigin="anonymous">
+                    </script>
+
+                    <script src="js/wow.min.js"></script>
+                    <script>
+                        new WOW().init();
+                    </script>
+
+                    <script src="js/script.js"></script>
+
+
+                    <script type="text/javascript">
+                        (function() {
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript'; script.async = true;
+                            script.src = 'https://app.remonline.ua/static/dist/js/order-status-widget.js';
+                            script.setAttribute('data-widget-key', '9b652324bb76090ed68abd259d5acdff');
+                            document.getElementsByTagName('head')[0].appendChild(script);
+                        })();
+                    </script>
+
+
+</body>
+
+
+</html>
