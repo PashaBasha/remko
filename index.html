@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex, nofollow"/> или <meta name="robots" content="none"/>
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script async src="js/jquery.min.js"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+
+    <header class="header" id="header">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
+            </a>
+            <button class="navbar-toggler second-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav header-menu">
+                    <a class="nav-link text-center" aria-current="page" href="/index.html">Главная</a>
+                    <a class="nav-link text-center" href="/documents.html">Документы</a>
+                    <a class="nav-link text-center flowing-scroll" href="#footer">Контакты</a>
+                    <a class="nav-link text-center" href="/abaut.html">О нас</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-body p-0">
+
+
+                <div class="d-flex align-items-stretch">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="position: absolute;top: 15px; right:15px"></button>
+                    <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                        <h3 class="mb-4">Контакти</h3>
+                        <div id="form-message-warning" class="mb-4 text-danger"></div>
+                        <!-- <div id="form-message-success" class="mb-4 ">
+                            Your message was sent, thank you!
+                        </div> -->
+                        <form action="mail.php" method="POST" id="contactForm" name="contactForm" class="contactForm">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div class="status text-danger"></div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Имя">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group">
+                                        <input type="phone" class="form-control" name="phone" placeholder="Телефон">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6"
+                                            placeholder="Собщение"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-check pb-3">
+                                    <input class="form-check-input invalidCheck" name="checkData" type="checkbox">
+                                    <label class="form-check-label">
+                                        Я согласен на оброботку персональных данных
+                                    </label>
+                                 
+                               
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <button type="button" onclick='validateForm(contactForm)'
+                                            class="btn btn-warning" id="sendMail">Отправить</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="row justify-content-between container">
+                <div class="swiper__img col-lg-5 wow fadeInDown" data-wow-duration="2s" data-wow-delay="0s"">
+                    <picture><source srcset="img/printerSlider.webp" type="image/webp"><img src="img/printerSlider.png" alt=""></picture>
+                </div>
+                <div class="swiper__text col-lg-6 align-self-center text-start wow fadeInRight" data-wow-duration="2s"
+                    data-wow-delay="0s"">
+                    <div class="header__title">
+                    <h2>Ремонт вашего принтера</h2>
+                </div>
+                <p style="font-weight: bold;">Сервис, которому можно доверять</p>
+                <div class="header__subtitle col-lg-10">
+                    <p>Мы предлагаем конкурентную цену и высокое качество услуги. Будьте уверены - все нормы
+                        технологического процесса будут соблюдены, а ваши ожидания удовлетворены.</p>
+                </div>
+
+                <button class="btn btn-warning" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Консультация</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper-slide">
+        <div class="row justify-content-between container">
+            <div class="swiper__img col-lg-5">
+                <picture><source srcset="img/TonerSlider.webp" type="image/webp"><img src="img/TonerSlider.png" alt="" style="margin: 50px 0"></picture>
+            </div>
+            <div class="swiper__text col-lg-6  text-start">
+                <div class="header__title">
+                    <h2>Заправка картриджей</h2>
+                </div>
+                <div class="header__subtitle col-lg-10">
+                    <p>Такие услуги, как ремонт, профилактика и обслуживание— визитная карточка нашей компании. По
+                        эффективности и качеству здесь нам нет равных. Мы гарантируем, что, заказав эту и другие услуги,
+                        вы останетесь довольны процессом и результатом.</p>
+                </div>
+                <button class="btn btn-warning" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Консультация</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="swiper-slide">
+        <div class="row justify-content-between container">
+            <div class="swiper__img col-lg-5">
+                <picture><source srcset="img/ComputerSlider.webp" type="image/webp"><img src="img/ComputerSlider.png" alt=""></picture>
+            </div>
+            <div class="swiper__text col-lg-6 align-self-center text-start">
+                <div class="header__title">
+                    <h2>Ремонт компьютерной техники</h2>
+
+
+                </div>
+                <div class="header__subtitle col-lg-10">
+                    <p>Став нашим клиентом, вы доверяете свою технику настоящим профессионалам. В сервисном центре есть
+                        все необходимое оборудование, которое позволяет выявить неполадку, а затем устранить ее. Мы не
+                        только занимаемся заменой микросхем и ремонтом аппаратной части технических устройств. Наши
+                        специалисты занимаются переустановкой операционных систем, установкой драйверов, необходимых для
+                        полноценной работы ноутбуков и ПК. Мастера устанавливают антивирусные программы, могут провести
+                        поиск и удаление вредоносного ПО, а так же делают все необходимое для комфортной
+                        полнофункциональной эксплуатации вашего устройства.</p>
+                </div>
+                <button class="btn btn-warning" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Консультация</button>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+<div class="icon-scroll"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        //   autoplay: {
+        //     delay: 4500,
+        //     disableOnInteraction: false,
+        //   },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+    <section class="briefly-about">
+    <div class="container">
+        <h4 class="big-title wow fadeInLeft"> Что умеем ?</h4>
+        <div class="row justify-content-between">
+            <div class="briefly-about__img col-lg-6 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s"">
+                <picture><source srcset="img/briefly-about.webp" type="image/webp"><img src="img/briefly-about.png" alt=""></picture>
+            </div>
+            <div class="briefly-about__text align-self-center col-lg-5 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0s"">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eaque rerum amet excepturi, doloribus
+                    voluptatem unde? Natus, a deserunt? Aut, atque reprehenderit! Cupiditate distinctio facere nemo aut
+                    blanditiis amet eos eaque ipsa dignissimos earum repellendus repellat omnis sunt, quos adipisci
+                    beatae
+                    reprehenderit ad fugiat laborum, consequuntur nihil! Atque, ducimus! Sapiente excepturi assumenda
+                    amet
+                    fugit quibusdam dignissimos optio nobis accusantium. Cupiditate nemo inventore itaque quibusdam
+                    voluptates ex expedita facere quasi excepturi temporibus accusamus tenetur omnis commodi,
+                    consequatur
+                    reiciendis officiis illum, unde aspernatur. Quisquam, quibusdam eaque? Quia obcaecati, ipsum
+                    excepturi
+                    neque sint illo quam dignissimos, delectus dolore error sunt ea ut nesciunt!</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="services wow fadeInDown slower">
+    <div class="container">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ремонт принтеров</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ремонт ноутбуков</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Заправка и восстановление картриджей</button>
+            </li>
+        </ul>
+        <div class="tab-content mt-lg-5 pt-lg-5" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row justify-content-between">
+                    <div class="tab__text-box col-lg-5">
+                        <div class="tab__title wow fadeInLeft slowe">
+                            <h4>РЕМОНТ ПРИНТЕРОВ И МФУ</h4>
+                        </div>
+                        <div class="tab__text wow fadeInLeft slower">
+                            <p>Сервис, которому можно доверять
+                                Такие услуги, как ремонт, профилактика и обслуживание— визитная карточка нашей компании.
+                                По эффективности и качеству здесь нам нет равных. Мы гарантируем, что, заказав эту и
+                                другие услуги, вы останетесь довольны процессом и результатом.
+                            </p>
+                        </div>
+                        <button class="btn btn-warning mb-5 wow fadeInUp slower" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Заказать</button>
+                    </div>
+                    <div class="tab__cards-box col-lg-6">
+                        <div class="row justify-content-around">
+                            <div class="tab__card col-lg-3 col-5 wow fadeInDown ">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/piggy-bank.webp" type="image/webp"><img src="/img/icons/piggy-bank.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Доступная цена
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-5 wow fadeInDown slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/back-in-time.webp" type="image/webp"><img src="/img/icons/back-in-time.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Выполним работу качественно и быстро
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-11 wow fadeInDown slower">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/garant.webp" type="image/webp"><img src="/img/icons/garant.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Гарантия на весь цикл печати.
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row justify-content-between">
+                    <div class="tab__text-box col-lg-5">
+                        <div class="tab__title">
+                            <h4>РЕМОНТ ПК И НОУТБУКОВ</h4>
+                        </div>
+                        <div class="tab__text">
+                            <p>Подходим к делу с пониманием
+                                <br>
+                                Став нашим клиентом, вы доверяете свою технику настоящим профессионалам. В сервисном
+                                центре есть все необходимое оборудование, которое позволяет выявить неполадку, а затем
+                                устранить ее. Мы не только занимаемся заменой микросхем и ремонтом аппаратной части
+                                технических устройств. Наши специалисты занимаются переустановкой операционных систем,
+                                установкой драйверов, необходимых для полноценной работы ноутбуков и ПК. Мастера
+                                устанавливают антивирусные программы, могут провести поиск и удаление вредоносного ПО, а
+                                так же делают все необходимое для комфортной полнофункциональной эксплуатации вашего
+                                устройства.
+                            </p>
+                        </div>
+                        <button class="btn btn-warning mb-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Заказать</button>
+                    </div>
+                    <div class="tab__cards-box col-lg-6">
+                        <div class="row justify-content-around">
+                            <div class="tab__card col-lg-3 col-5 animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/master.webp" type="image/webp"><img src="/img/icons/master.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Мастера с опытом работы более 5 лет
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-5 animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/setting.webp" type="image/webp"><img src="/img/icons/setting.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Lor222em, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, nihil.
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-11 animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/team.webp" type="image/webp"><img src="/img/icons/team.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Множество довольных клиентов
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row justify-content-between">
+                    <div class="tab__text-box col-lg-5">
+                        <div class="tab__title">
+                            <h4>
+                                Заправка и восстановление картриджей</h4>
+                        </div>
+                        <div class="tab__text">
+                            <p>
+                                Идеальное соотношение цены/качества
+                                Мы предлагаем конкурентную цену и высокое качество услуги. Будьте уверены - все нормы
+                                технологического процесса будут соблюдены, а ваши ожидания удовлетворены.
+                            </p>
+                        </div>
+                        <button class="btn btn-warning mb-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Заказать</button>
+                    </div>
+                    <div class="tab__cards-box col-lg-6">
+                        <div class="row justify-content-around">
+                            <div class="tab__card col-lg-3 col-5  animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/computer-icon.webp" type="image/webp"><img src="/img/icons/computer-icon.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Большой опыт в ремонте разной компьютерной техники.
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-5  animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/experience.webp" type="image/webp"><img src="/img/icons/experience.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Лицензированная мастерская.
+
+                                </div>
+                            </div>
+                            <div class="tab__card col-lg-3 col-11  animated pulse infinite slow">
+                                <div class="tab__card-icon">
+                                    <picture><source srcset="/img/icons/customer-service.webp" type="image/webp"><img src="/img/icons/customer-service.png" alt=""></picture>
+                                </div>
+                                <div class="tab__card-text">
+                                    Ответим на все ваши вопросы, как до ремонта, так и после.
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="worked">
+    <div class="container">
+        <h4 class="big-title wow fadeInDown slower">Как мы работаем</h4>
+        <div class="worked-box">
+            <div class="row justify-content-around">
+                <div class="worked-item col-lg-2 col-5 wow fadeInDown">
+                    <div class="worked-icon">
+                        <span class="worked-numbers">1</span>
+                        <picture><source srcset="/img/icons/call.webp" type="image/webp"><img src="/img/icons/call.png" alt=""></picture>
+                    </div>
+                    <div class="worked-text">
+                        <p>
+                            Оставляете заявку в удобной форме нашему менеджеру (звонок, месенджер, email)
+                        </p>
+                    </div>
+                </div>
+                <div class="worked-item col-lg-2 col-5  wow fadeInDown slow">
+                    <div class="worked-icon">
+                        <span class="worked-numbers">2</span>
+                        <picture><source srcset="/img/icons/note.webp" type="image/webp"><img src="/img/icons/note.png" alt=""></picture>
+                    </div>
+
+                    <div class="worked-text">
+                        <p>
+                            Курьер доставляет вашу технику в наш сервис. 
+                        </p>
+                    </div>
+                </div>
+                <div class="worked-item col-lg-2 col-5  wow fadeInDown slower">
+                    <div class="worked-icon">
+                        <span class="worked-numbers">3</span>
+                        <picture><source srcset="/img/icons/wrench.webp" type="image/webp"><img src="/img/icons/wrench.png" alt=""></picture>
+                    </div>
+
+                    <div class="worked-text">
+                        <p>
+                            Мы осуществляем диагностику, ремонт, обслуживание вашего устройства.
+                        </p>
+                    </div>
+                </div>
+                <div class="worked-item col-lg-2 col-5 wow fadeInDown slower">
+                    <div class="worked-icon">
+                        <span class="worked-numbers">4</span>
+                        <picture><source srcset="/img/icons/win.webp" type="image/webp"><img src="/img/icons/win.png" alt=""></picture>
+                    </div>
+                 
+                    <div class="worked-text">
+                        <p>
+                            Возвращаем ваше устройство в оговоренные сроки и цены.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="benefits">
+
+    <div class="container">
+
+        <h4 class="big-title wow zoomInLeft slow">Почему мы</h4>
+        <div class="benefits-box">
+            <div class="row justify-content-center">
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Качественная диагностика и тестирование</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center">
+                            <picture><source srcset="/img/icons/mechanic.webp" type="image/webp"><img src="/img/icons/mechanic.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">
+                            Скрупулёзный подход при диагностике и ремонте вашей техники. 
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Адаптированая CRM система</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center">
+                            <picture><source srcset="/img/icons/calendar.webp" type="image/webp"><img src="/img/icons/calendar.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">Полная история всех работ, справочники по запчастям и моделям устройств, отслеживание статуса заказа
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Многолетний опыт и высокая квалификация</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center">
+                            <picture><source srcset="/img/icons/tools.webp" type="image/webp"><img src="/img/icons/tools.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">Решаем сложные проблемы, подбираем наиболее выгодые условия для клиентов
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Информационное сопровождение</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center">
+                            <picture><source srcset="/img/icons/support.webp" type="image/webp"><img src="/img/icons/support.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">Обширные и глубокие знания в своей сфере экономят время и помогают в выборе
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Быстрая и удобная доставка</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center wow zoomInDown slow">
+                            <picture><source srcset="/img/icons/support2.webp" type="image/webp"><img src="/img/icons/support2.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">
+                            Ценим ваше время и направляем курьера по наиболее оптимальному маршруту
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits__item col-lg-3 col-10 col-sm-4 wow zoomInDown slow">
+                    <div class="benefits__title">
+                        <h4>Хорошее материально-техническое обеспечение</h4>
+                    </div>
+                    <div class="row">
+                        <div class="benefits__img col-4 align-self-center">
+                            <picture><source srcset="/img/icons/warranty.webp" type="image/webp"><img src="/img/icons/warranty.png" alt=""></picture>
+                        </div>
+                        <div class="benefits__text col-8">
+                         Проверочное оборудование и инструменты для выполнения качественного ремонта.
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+    <footer class="footer" id="footer">
+  <div class="row">
+    <div class="footer-left col-lg-6">
+      <form method="POST" id="footer-form" name="footerForm" class="row g-3">
+        <div class="status text-danger"></div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefault01" class="form-label">Ваше имя</label>
+          <input name='name' type="text" class="form-control" id="validationDefault01" placeholder="Имя" required>
+        </div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefaultUsername" class="form-label">Електронная почта</label>
+          <div class="input-group">
+            <!-- <span class="input-group-text" id="inputGroupPrepend2">@</span> -->
+            <input name='email' type="text" class="form-control" id="validationDefaultUsername" placeholder="Еmail"
+              aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="col-md-4 pb-3">
+          <label for="validationDefault05" class="form-label">Номер телефона</label>
+          <input name='phone' type="text" id='phone2' class="form-control" id="validationDefault05" placeholder="Тел"
+            required>
+        </div>
+        <div class="col-12 pb-3">
+          <div class="form-check">
+            <input class="form-check-input invalidCheck" name="checkData" type="checkbox" value="" id="invalidCheck2"
+              required>
+            <label class="form-check-label" for="invalidCheck2">
+              Я согласен на оброботку персональных данных
+            </label>
+          </div>
+        </div>
+        <div class="col-md-12 pb-3">
+          <div class="form-group">
+            <button type="button" onclick='validateForm(footerForm)' class="btn btn-warning"
+              id="sendMail2">Отправить</button>
+
+          </div>
+        </div>
+      </form>
+      <div class="footer-contacts">
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="/img/icons/phone.webp" type="image/webp"><img src="/img/icons/phone.png" alt=""></picture>
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Тел: 063 177 55 88 </a>
+            <a href="#">Тел: 096 527 67 22 </a>
+            <a href="#">Тел: 048 736 53 46 </a>
+          </div>
+        </div>
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="/img/icons/gmail.webp" type="image/webp"><img src="/img/icons/gmail.png" alt=""></picture>
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Email: repko@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-contacts__item">
+          <div class="footer-contacts__icon">
+            <picture><source srcset="/img/icons/telegram.webp" type="image/webp"><img src="/img/icons/telegram.png" alt=""></picture>
+
+          </div>
+          <div class="footer-contacts__link">
+            <a href="#">Teleg: repko</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div id="map" class="col-lg-6">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.9350048090846!2d30.722626915791917!3d46.46979537380097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63187bb197823%3A0xe3cd77c0e9e5d258!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCAxOCwg0J7QtNC10YHRgdCwLCDQntC00LXRgdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA2NTAwMA!5e0!3m2!1sru!2sua!4v1634898967823!5m2!1sru!2sua"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+
+  <div class="create">
+
+    <p>© 2021 Репко</p>
+    <a href="https://truedream.site/">Cайт создан компанией TrueDream</a>
+  </div>
+
+</footer>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+
+<!-- <script>
+  $(document).ready(function () {
+
+    google.maps.event.addDomListener(window, 'load', initMap);
+  });
+</script>
+
+<script async defer>
+  function initMap() {
+    var pos = { lat: 49.831, lng: 23.997 }
+
+    const map = new google.maps.Map(document.getElementById("map"),
+      {
+        center: { lat: 49.831, lng: 23.997 },
+        zoom: 17,
+
+        styles: [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#f5f5f5"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#ffffff"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#dadada"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#e5e5e5"
+              }
+            ]
+          },
+          {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#eeeeee"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#c9c9c9"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          }
+        ]
+
+
+
+      }
+
+
+    );
+    new google.maps.Marker({
+      position: map.getCenter(),
+      // icon: {
+      //     src: 'img/icon/marker-icon-19-ffe500-40.png',
+
+      // },
+      // icon: 'img/icon/marker-icon-19-ffe500-40.png',
+
+
+
+      draggable: true,
+      map: map,
+      // animation: google.maps.Animation.BOUNCE
+
+    });
+
+  }
+
+
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCosqyWAVbCJ_OVBDSu14ZqrHH05pYcNs8&callback=initMap">
+</script> -->
+
+
+
+    <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript'; script.async = true;
+            script.src = 'https://app.remonline.ua/static/dist/js/order-status-widget.js';
+            script.setAttribute('data-widget-key', '9b652324bb76090ed68abd259d5acdff');
+            document.getElementsByTagName('head')[0].appendChild(script);
+        })();
+    </script>
+</body>
+
+
+</html>
